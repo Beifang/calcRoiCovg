@@ -1,14 +1,15 @@
+/// Date: 05.14.2013 
+/// Author: Beifang Niu
+/// Modified the code to allow user to customize categories of mutation rates. 
+/// E.g. TpC or TpT or any XpX 
+//
+//
 /// Author: Cyriac Kandoth
 /// Date: 01.19.2011
 /// Description: Counts bases with sufficient read-depth in regions of interest within two BAMs
 /// Notes:
 /// - If ROIs of the same gene overlap, they will not be merged. Use BEDtools' mergeBed if needed
 /// - The totals written at the end count each base only once, even if it is in multiple ROIs
-//
-/// Date: 05.14.2013 
-///  Beifang Niu
-///  Modified the code to allow user to customize categories of mutation rates. 
-///  E.g. TpC or TpT or any XpX 
 //
 
 #include <stdint.h>
