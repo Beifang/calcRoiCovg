@@ -46,11 +46,16 @@ If you are using Fedora, CentOS or RHEL, you'll need these packages instead:
 
     sudo yum install git samtools-devel zlib-devel
 
-Clone the samtools and calc-roi-covg repos, and build the `calcRoiCovg` binary:
+Download the samtools-0.1.19 from SOURCEFORGE (http://sourceforge.net/projects/samtools/files/samtools/0.1.19):
 
-    git clone https://github.com/samtools/samtools.git
-    export SAMDIR=$PWD/samtools
-    git clone https://github.com/ding-lab/calc-roi-covg.git
+    tar jxf samtools-0.1.19.tar.bz2
+    cd samtools-0.1.19
+    make
+    export SAMDIR=$PWD
+
+Clone the calc-roi-covg repo, and build the `calcRoiCovg` binary:
+
+    git clone https://github.com/Beifang/calcRoiCovg.git
     cd calc-roi-covg
     make
 

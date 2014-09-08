@@ -17,6 +17,7 @@
 #include <stdbool.h>
 #include <string.h>
 #include <ctype.h>
+#include <omp.h>
 
 #include "sam.h"
 #include "faidx.h"
@@ -182,6 +183,10 @@ static int pileup_func_1(uint32_t tid, uint32_t pos, int n, const bam_pileup1_t 
         int i;
         int mapq_n = 0;
         
+    // openmp parallel 
+    omp_set_num_threads( 2 );
+#pragma omp parallel for
+         
         for (i = 0; i < n; ++i)
         {
             const bam_pileup1_t *base = pl + i;
@@ -213,6 +218,9 @@ static int pileup_func_2(uint32_t tid, uint32_t pos, int n, const bam_pileup1_t 
         
         uint8_t j;
 
+    // openmp parallel 
+    omp_set_num_threads( 2 );
+#pragma omp parallel for
         for (i = 0; i <n; ++i)
         {
             const bam_pileup1_t *base = pl + i;
