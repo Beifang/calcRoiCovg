@@ -51,7 +51,7 @@ Download the samtools-0.1.19 from SOURCEFORGE (http://sourceforge.net/projects/s
     tar jxf samtools-0.1.19.tar.bz2
     cd samtools-0.1.19
     make
-    export SAMDIR=$PWD
+    export SAMTOOLS_ROOT=$PWD
 
 Clone the calc-roi-covg repo, and build the `calcRoiCovg` binary:
 
