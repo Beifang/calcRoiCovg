@@ -34,7 +34,7 @@ void usage(void)
     fprintf(stderr, "        -q INT    filtering reads with mapping quality less than INT [%d]\n", data.min_mapq);
     fprintf(stderr, "        -n INT    minimum reads depth for bam1 [%d]\n", data.min_depth_bam1);
     fprintf(stderr, "        -t INT    minimum reads depth for bam2 [%d]\n", data.min_depth_bam2);
-    fprintf(stderr, "        -c STRING bp class types, delimited by comma, default: \"AT,CpG,CG\"\n");
+    fprintf(stderr, "        -c STRING bp class types, delimited by comma, default: \"AT,CG,CpG\"\n");
     
     fprintf( stderr, "\n\nROI file should be a tab-delimited list of [chrom, start, stop, annotation]" );
     fprintf( stderr, "\nwhere start and stop are both 1-based chromosomal loci. For example:" );
@@ -94,7 +94,7 @@ int main(int argc, char *argv[])
     //= 
     //"CpG,AT,CG,IUB,UNKNOWN";
     //
-    data.bp_class_types = "AT,CpG,CG";
+    data.bp_class_types = "AT,CG,CpG";
 
     //fprintf(stderr, "bp class types: %s\n", data.bp_class_types);
 
